@@ -1,0 +1,176 @@
+=================================================================
+MAPPA "CUANT CHE LA CJERA A TRIMA..."
+I luoghi del terremoto - Travesio 1976-2026
+Circolo Culturale "F. Viviano"
+=================================================================
+
+COSA C'E' IN QUESTA CARTELLA
+----------------------------
+  index.html   la mappa (pagina web completa, autonoma)
+  dati.js      i contenuti: titoli, coordinate, foto, testimonianze
+               e il tracciato del filo rosso
+  foto\        le fotografie storiche (18 immagini)
+  _strumenti\  script per rigenerare il filo rosso quando si
+               spostano i punti (vedi la sezione "IL FILO ROSSO")
+  LEGGIMI.txt  questo file
+
+La pagina funziona anche in locale: doppio click su index.html
+(serve solo la connessione a internet per lo sfondo della mappa).
+Funziona su telefoni, tablet e computer, con qualsiasi browser
+recente; non usa servizi esterni se non lo sfondo della mappa
+(OpenStreetMap, con passaggio automatico a un server di riserva).
+
+
+COME PROVARE LA MAPPA
+---------------------
+Aprire index.html con doppio click. Si apre nel browser:
+  - schermata di presentazione, poi la mappa con 11 punti numerati
+  - il FILO ROSSO e' l'anello consigliato per visitarli tutti in
+    ordine e tornare al punto di partenza (vedi sezione dedicata)
+  - toccando/cliccando un punto si apre la scheda con foto e
+    testimonianze
+  - la LINEA ROSSA e' l'itinerario consigliato per visitarli tutti
+    in ordine (8,8 km a piedi, circa 2 ore, si torna al punto di
+    partenza). Il pulsante "Itinerario" in alto a sinistra la
+    nasconde e la rimostra: chi la spegne vede solo i punti.
+  - "Elenco" mostra la lista di tutti i luoghi
+  - "Vedi dove sei" nella scheda accende il punto blu del visitatore
+    e inquadra insieme lui e il pannello scelto (tutto dentro la
+    mappa, senza aprire altre applicazioni)
+  - il tasto con il mirino ATTIVA IL TRACCIAMENTO: il punto blu
+    segue il visitatore lungo il cammino (si spegne ripremendolo).
+    NOTA: la posizione funziona sulla mappa pubblicata su internet
+    (indirizzo https) e in locale; se il browser la blocca,
+    controllare i permessi.
+
+
+COME SPOSTARE UN PUNTO SULLA MAPPA (posizione esatta dei cartelli)
+------------------------------------------------------------------
+1. Aprire la mappa aggiungendo  ?modifica  all'indirizzo
+   (esempio in locale: doppio click su index.html, poi aggiungere
+   ?modifica alla fine dell'indirizzo nella barra del browser)
+2. Trascinare i punti nella posizione esatta di ogni cartello
+3. Premere "Copia coordinate" e poi "Copia negli appunti"
+4. Aprire dati.js con il Blocco note e sostituire i valori
+   lat: e lon: dei luoghi spostati con quelli copiati
+5. Salvare e ricaricare la pagina per controllare
+6. Rigenerare il filo rosso con doppio click su
+   _strumenti\aggiorna_percorso.py (vedi sezione IL "FILO ROSSO")
+
+
+IL "FILO ROSSO" (l'itinerario consigliato)
+------------------------------------------
+La linea rossa NON e' inventata dal computer: e' il giro deciso da
+chi conosce il paese, e cioe':
+
+  dal pannello 1 si sale per Via Val Cosa; si torna per Via Zancan
+  vedendo i pannelli 2 e 3; si sale per Piazza Venti Settembre e
+  poi verso Via Praforte per i pannelli 4 e 5; si scende e si fa
+  Via Riosecco per il 6; seguendo Via Villa si arriva al 7; si
+  prosegue per Via Gondei, Via Roma e Via Stazione, girando infine
+  in Via Dante per l'8; poi Via Fornasatta e Via Fontana fino al 9;
+  si prosegue fino al 10 in Via Mazzini; si segue Via Val Cosa fino
+  all'incrocio con Via Garibaldi (pannello 11) e si torna al punto
+  di partenza passando per Via Molevana.
+
+In totale 8,8 km, circa 2 ore di cammino. Il tracciato e' salvato in
+fondo a dati.js (window.PERCORSO), quindi la mappa non dipende da
+nessun servizio esterno per mostrarlo.
+Chi non lo vuole vedere puo' spegnerlo con il pulsante "Itinerario"
+in alto a sinistra: restano solo i punti.
+
+PER CAMBIARE IL GIRO o dopo aver spostato dei punti: doppio click su
+_strumenti\aggiorna_percorso.py (serve Python; in alternativa
+chiedere a chi gestisce la mappa). All'inizio di quel file c'e' la
+tabella ITINERARIO, che elenca le vie da seguire tra un pannello e
+l'altro: basta modificare quelle e rilanciare il programma.
+Esempio di una riga: da 6 a 7 seguendo Via Riosecco e Via Villa ->
+    (6,  7,  ["Via Riosecco", "Via Villa"]),
+I nomi delle vie vanno scritti come sono su OpenStreetMap (per es.
+"Via Giuseppe Mazzini", "Via Dante Alighieri").
+
+
+COME MODIFICARE TESTI E FOTO
+----------------------------
+Aprire dati.js con il Blocco note: ogni luogo ha titolo, zona,
+indirizzo, coordinate, elenco foto con didascalia ("did") e
+testimonianze ("testo"). Modificare il testo desiderato e salvare.
+Per aggiungere una foto: copiarla nella cartella foto\ e aggiungere
+una riga  { src: "foto/nomefile.jpg", did: "didascalia" }  al luogo.
+
+
+COME PUBBLICARLA SU INTERNET (GitHub Pages, gratuito)
+-----------------------------------------------------
+1. Creare un account gratuito su https://github.com
+2. Creare un nuovo repository pubblico, ad esempio con nome
+   "mappa-terremoto-travesio"
+3. Caricare (upload) TUTTI i file di questa cartella:
+   index.html, dati.js e la cartella foto con le immagini
+4. In Settings > Pages scegliere "Deploy from a branch",
+   branch "main", cartella "/ (root)" e salvare
+5. Dopo qualche minuto la mappa sara' visibile all'indirizzo:
+   https://NOMEUTENTE.github.io/mappa-terremoto-travesio/
+Questo indirizzo e' stabile: e' quello da usare per il codice QR
+da stampare sui pannelli. IMPORTANTE: non rinominare e non
+cancellare il repository dopo aver stampato i QR, altrimenti
+l'indirizzo stampato non funzionera' piu'.
+
+
+CODICE QR PER I PANNELLI — PERCHE' FUNZIONI "PER SEMPRE"
+--------------------------------------------------------
+Il QR va generato DOPO la pubblicazione, quando si conosce
+l'indirizzo definitivo, e deve puntare a quell'indirizzo.
+Regole d'oro perche' il QR stampato non smetta mai di funzionare:
+ 1. l'indirizzo github.io NON scade, non costa nulla e non va
+    rinnovato: basta NON cancellare e NON rinominare ne' l'account
+    ne' il repository. Meglio di un dominio a pagamento, che invece
+    smette di funzionare se si dimentica un rinnovo annuale.
+ 2. conservare nome utente e password dell'account GitHub in un
+    posto sicuro condiviso (es. con il Circolo), cosi' la mappa
+    resta aggiornabile anche fra molti anni;
+ 3. conservare una copia di questa cartella (o dello ZIP): se un
+    giorno servisse cambiare casa alla mappa, si ricarica identica
+    altrove e si puo' impostare un reindirizzamento dal vecchio
+    indirizzo;
+ 4. stampare sotto il QR anche l'indirizzo scritto per esteso,
+    cosi' chi non riesce a scansionare puo' digitarlo.
+
+
+PER IL SITO DEL COMUNE / UFFICIO TURISTICO (turismofvg.it)
+----------------------------------------------------------
+La mappa e' una pagina statica autonoma: chi gestisce il sito puo'
+  a) inserire un semplice collegamento all'indirizzo della mappa, oppure
+  b) incorporarla dentro una pagina esistente con questo codice:
+
+     <iframe src="INDIRIZZO-DELLA-MAPPA" style="width:100%;
+       height:80vh; border:0" title="Mappa dei luoghi del
+       terremoto - Travesio 1976-2026"></iframe>
+
+  c) oppure caricare direttamente questi stessi file sul proprio
+     server, in una sottocartella qualsiasi (non servono database
+     ne' programmi: funziona ovunque cosi' com'e')
+Per la pagina dello IAT di Travesio su turismofvg.it occorre
+chiedere alla redazione di PromoTurismoFVG di aggiungere il
+collegamento.
+
+
+NOTE E COSE DA COMPLETARE
+-------------------------
+- Posizioni dei punti, situazione attuale:
+  * punti 1, 2, 4, 9, 10: presi dalle chiese e dalle ancone
+    censite su OpenStreetMap;
+  * punti 3, 5, 6, 7, 11: corretti su indicazione di chi conosce
+    i luoghi (3 = dove c'e' il locale Furpizza; 5 = incrocio di
+    Via Praforte con il sentiero; 6 = casa civico 101; 7 = angolo
+    a 45 gradi tra Via Gondei e Via Villa, civico 1; 11 = davanti
+    alla chiesa verso Via Garibaldi);
+  * punto 8 (Usago, Via Dante): ancora stimato sulla via, da
+    rifinire con la modalita' ?modifica.
+- Le didascalie delle foto sono provvisorie: da far rivedere al
+  Circolo Culturale.
+- La poesia di Novella Cantarutti e' predisposta ma NON inserita:
+  prima serve l'autorizzazione dei familiari.
+- Il cartello n. 12 della bozza (Usago, Via Val Cosa, Ancona di
+  S. Antonio) e' stato escluso come richiesto.
+- Attribuzione dello sfondo mappa (obbligatoria): (c) OpenStreetMap,
+  gia' presente nella pagina.

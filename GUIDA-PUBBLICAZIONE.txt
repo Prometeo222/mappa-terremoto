@@ -1,0 +1,156 @@
+=================================================================
+COME METTERE LA MAPPA SU INTERNET (guida passo passo)
+Mappa "Cuant che la cjera a trima..." - Travesio 1976-2026
+=================================================================
+
+A COSA SERVE
+Mettere la mappa online significa darle un indirizzo internet che
+chiunque puo' aprire dal telefono. Quell'indirizzo e' quello che
+finira' dentro il codice QR stampato sui pannelli.
+Il servizio usato si chiama GitHub Pages: e' gratuito, non scade e
+non va rinnovato. Serve solo non cancellare l'account.
+
+Tutto si fa dal browser: non bisogna installare niente.
+Tempo necessario: circa 15 minuti.
+
+
+-----------------------------------------------------------------
+PASSO 1 - L'ACCOUNT
+-----------------------------------------------------------------
+(Se l'account esiste gia', saltare al passo 2.)
+
+  1. Andare su   https://github.com/signup
+  2. Inserire una email, una password e un nome utente.
+
+     ATTENZIONE: il nome utente finira' dentro l'indirizzo della
+     mappa, quindi conviene sceglierlo neutro o col nome
+     dell'associazione (es. circolo-viviano), non un nome
+     personale. Dopo la stampa dei QR non si potra' piu' cambiare.
+
+  3. Confermare l'email che arriva nella posta.
+  4. ANNOTARE nome utente e password in un posto sicuro, condiviso
+     con il Circolo: serviranno per ogni aggiornamento futuro.
+
+
+-----------------------------------------------------------------
+PASSO 2 - CREARE IL CONTENITORE (repository)
+-----------------------------------------------------------------
+(Se e' gia' stato creato, saltare al passo 3.)
+
+  1. Andare su   https://github.com/new
+  2. Repository name:  mappa-terremoto
+     (questo nome finisce nell'indirizzo: meglio tutto minuscolo)
+  3. Description: facoltativa
+  4. Lasciare selezionato  Public
+  5. NON attivare "Add a README", "Add .gitignore", "Add license"
+  6. Premere il pulsante verde  Create repository
+
+
+-----------------------------------------------------------------
+PASSO 3 - CARICARE I FILE
+-----------------------------------------------------------------
+  1. Nella pagina del repository, cliccare il collegamento
+     "uploading an existing file"
+     (oppure andare direttamente all'indirizzo del repository
+      aggiungendo in fondo:  /upload/main )
+
+  2. Aprire in Esplora risorse la cartella
+        Desktop\Mappa Comune\mappa-terremoto
+
+  3. IMPORTANTE: selezionare il CONTENUTO della cartella, non la
+     cartella stessa. Cliccare dentro la cartella, premere
+     Ctrl+A per selezionare tutto, e trascinare la selezione
+     dentro il riquadro tratteggiato della pagina web.
+
+     Se per sbaglio si trascina la cartella "mappa-terremoto"
+     intera, l'indirizzo finale avra' un pezzo in piu' e il QR
+     andra' rifatto: meglio controllare.
+
+  4. Attendere che l'elenco dei file compaia completo. Devono
+     esserci: index.html, dati.js, LEGGIMI.txt, questa guida, la
+     cartella foto (18 immagini) e la cartella _strumenti.
+
+  5. Scorrere in fondo alla pagina e premere il pulsante verde
+     Commit changes.
+
+
+-----------------------------------------------------------------
+PASSO 4 - ACCENDERE IL SITO
+-----------------------------------------------------------------
+  1. Nel repository, cliccare  Settings  (in alto a destra)
+  2. Nel menu a sinistra, cliccare  Pages
+  3. Alla voce "Build and deployment":
+       - Source: scegliere  Deploy from a branch
+       - Branch: scegliere  main   e cartella  / (root)
+       - premere  Save
+
+     NOTA: se nel menu Branch compare solo "None", vuol dire che i
+     file non sono ancora stati caricati: tornare al passo 3.
+
+  4. Attendere da 2 a 5 minuti. Ricaricando la pagina Pages
+     comparira' in alto un riquadro con l'indirizzo del sito e il
+     pulsante "Visit site".
+
+
+-----------------------------------------------------------------
+PASSO 5 - PROVARLA DAL TELEFONO
+-----------------------------------------------------------------
+  1. Aprire l'indirizzo del sito dal telefono.
+  2. Controllare che:
+       - si veda la schermata di presentazione;
+       - toccando un punto si aprano foto e testimonianza;
+       - la linea rossa dell'itinerario si veda e si possa
+         spegnere col pulsante "Itinerario";
+       - premendo il tasto con il mirino il telefono chieda il
+         permesso per la posizione e compaia il punto blu.
+
+  Se le foto non si vedono, quasi sempre vuol dire che la cartella
+  "foto" non e' stata caricata: rifare il passo 3 caricando anche
+  quella.
+
+
+-----------------------------------------------------------------
+PASSO 6 - IL CODICE QR
+-----------------------------------------------------------------
+Solo ORA si genera il QR, perche' deve puntare all'indirizzo
+definitivo. Chiedere il QR a chi ha preparato la mappa, oppure
+generarlo da soli su un sito che crea QR gratuiti, incollando
+l'indirizzo del sito.
+
+Consigli per la stampa:
+  - stampare sotto il QR anche l'indirizzo scritto per esteso,
+    cosi' chi non riesce a inquadrarlo puo' digitarlo a mano;
+  - il QR deve essere di almeno 3x3 cm per essere letto bene;
+  - lasciargli attorno un margine bianco;
+  - provare a inquadrarlo con due o tre telefoni diversi PRIMA di
+    mandare in stampa tutti i pannelli.
+
+
+-----------------------------------------------------------------
+PERCHE' L'INDIRIZZO NON SMETTERA' DI FUNZIONARE
+-----------------------------------------------------------------
+  - Gli indirizzi github.io non scadono e non si pagano: non c'e'
+    nessun rinnovo da ricordare (a differenza di un dominio
+    personalizzato, che smette di funzionare se ci si dimentica di
+    pagarlo).
+  - Le uniche cose da NON fare mai dopo la stampa dei QR:
+      * cancellare o rinominare l'account;
+      * cancellare o rinominare il repository;
+      * spegnere GitHub Pages nelle impostazioni.
+  - Conservare le credenziali e una copia di questa cartella (o
+    dello ZIP). Se un giorno servisse spostare la mappa altrove,
+    si ricarica identica e si puo' far reindirizzare il vecchio
+    indirizzo al nuovo.
+
+
+-----------------------------------------------------------------
+COME AGGIORNARE LA MAPPA IN FUTURO
+-----------------------------------------------------------------
+L'indirizzo resta sempre lo stesso: si sostituiscono i file.
+  1. Entrare nel repository su github.com
+  2. Cliccare sul file da sostituire (per es. dati.js)
+  3. Cliccare l'icona della matita (Edit), modificare, poi
+     Commit changes
+  Oppure ricaricare i file nuovi con "Add file > Upload files":
+  i file con lo stesso nome vengono sostituiti.
+  Dopo 1-2 minuti la mappa online e' aggiornata.
