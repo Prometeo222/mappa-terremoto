@@ -87,7 +87,7 @@ window.LUOGHI = [
        cancello, poi la veduta del 1911 (il documento delle testimonianze
        dice "nella seconda foto … si nota la canonica in alto a destra"). */
     foto: [
-      { src: "foto/05_cancello.jpg", did: "" },
+      { src: "foto/05_cancello.jpg", did: "La canonica dopo il terremoto del 1976" },
       { src: "foto/05_storica1911.jpg", did: "Veduta del 16 aprile 1911: in alto a destra si nota la canonica" }
     ],
     testo: [
@@ -103,7 +103,7 @@ window.LUOGHI = [
     lat: 46.198429,
     lon: 12.865197,
     foto: [
-      { src: "foto/06_storica2.jpg", did: "Casa della famiglia Nassutti Maria, demolita e ricostruita" },
+      { src: "foto/06_storica2.jpg", did: "Casa della famiglia Nassutti Maria, demolita e successivamente ricostruita" },
       { src: "foto/06_storica1.jpg", did: "Casa delle famiglie Cattarinuzzi Dante e Petracco Regina, distrutta dal terremoto" }
     ],
     testo: [
@@ -119,8 +119,8 @@ window.LUOGHI = [
     lat: 46.195190,
     lon: 12.866160,
     foto: [
-      { src: "foto/07_storica1.jpg", did: "La casa dopo il terremoto" },
-      { src: "foto/07_storica2.jpg", did: "Le macerie nella borgata" },
+      { src: "foto/07_storica1.jpg", did: "" },
+      { src: "foto/07_storica2.jpg", did: "" },
       { src: "foto/07_storica3.jpg", did: "Il portale puntellato dopo le scosse" }
     ],
     testo: [
@@ -136,7 +136,7 @@ window.LUOGHI = [
     lon: 12.872659,
     /* Prima foto = quella in alto sul pannello (due case), seconda = quella in basso. */
     foto: [
-      { src: "foto/08_storica1.jpg", did: "Casa della famiglia Truant Ermando, distrutta dal terremoto, e casa di Borsoi Giuseppe, distrutta dal terremoto e ricostruita" },
+      { src: "foto/08_storica1.jpg", did: "Case di Truant Ermando e di Borsoi Giuseppe, distrutte dal terremoto" },
       { src: "foto/08_storica2.jpg", did: "Casa della famiglia Borsoi Antonio, distrutta dal terremoto e ricostruita" }
     ],
     testo: [
@@ -181,7 +181,7 @@ window.LUOGHI = [
     lat: 46.184790,
     lon: 12.881810,
     foto: [
-      { src: "foto/11_facciata.jpg", did: "La chiesa com'era" },
+      { src: "foto/11_facciata.jpg", did: "La chiesa com'era prima del terremoto del 1976" },
       { src: "foto/11_abside.jpg", did: "L'abside della chiesa" }
     ],
     testo: [
