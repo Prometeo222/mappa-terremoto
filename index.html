@@ -785,6 +785,20 @@ body.in-modifica #btnPercorso { top: calc(126px + env(safe-area-inset-top)); }
 #scheda .intestazione { flex: 1; min-width: 0; }
 #scheda h2 { font-family: Georgia, serif; font-size: 20px; line-height: 1.2; }
 #scheda .dove { font-size: 13.5px; color: var(--grigio); margin-top: 2px; }
+#scheda .nota { font-size: 13px; color: var(--grigio); font-style: italic; margin-top: 3px; line-height: 1.35; }
+#scheda .nota:empty { display: none; }
+
+/* poesia (ultimo pannello) */
+.poesia {
+  margin-top: 18px; padding: 16px 18px;
+  background: #fff; border: 1px solid var(--bordo);
+  border-top: 3px solid var(--accento); border-radius: 10px;
+  text-align: center;
+}
+.poesia h3 { font-family: Georgia, serif; font-size: 18px; font-style: italic; margin-bottom: 10px; }
+.poesia .versi { font-family: Georgia, serif; font-size: 16px; line-height: 1.75; color: var(--scuro); }
+.poesia .traduzione { font-size: 13.5px; color: var(--grigio); font-style: italic; margin-top: 12px; line-height: 1.5; }
+.poesia .autore { font-size: 13px; color: var(--accento); font-weight: 600; margin-top: 10px; }
 #chiudiScheda {
   flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%;
   border: none; background: #eee5d6; color: var(--scuro);
@@ -887,6 +901,13 @@ body.in-modifica #btnPercorso { top: calc(126px + env(safe-area-inset-top)); }
 }
 #pannelloIntro .pulsante { width: 100%; margin-top: 18px; padding: 14px; font-size: 16px; }
 #pannelloIntro .crediti { font-size: 12.5px; color: var(--grigio); margin-top: 16px; line-height: 1.5; }
+/* ringraziamenti: elenco in fondo alla presentazione */
+#pannelloIntro .ringraziamenti { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--bordo); text-align: left; }
+#pannelloIntro .ringraziamenti:empty { display: none; }
+#pannelloIntro .ringraziamenti h3 { font-size: 12.5px; font-weight: 700; color: var(--scuro); margin-bottom: 5px; }
+#pannelloIntro .ringraziamenti ul { list-style: none; }
+#pannelloIntro .ringraziamenti li { font-size: 12.5px; color: var(--grigio); line-height: 1.45; margin-top: 3px; padding-left: 11px; position: relative; }
+#pannelloIntro .ringraziamenti li:before { content: "·"; position: absolute; left: 2px; }
 /* SPAZIO PREDISPOSTO: quando arriverà l'autorizzazione dei familiari, la poesia
    di Novella Cantarutti ("J' sin") potrà essere aggiunta nella schermata di
    presentazione (#pannelloIntro), tra i paragrafi e il pulsante. */
@@ -941,7 +962,7 @@ body.in-modifica #btnPercorso { top: calc(126px + env(safe-area-inset-top)); }
     <div class="sotto">I luoghi del terremoto · Travesio 1976–2026</div>
   </div>
   <button class="pulsante" id="btnElenco">☰ Elenco</button>
-  <button class="pulsante tondo" id="btnInfo" aria-label="Informazioni">i</button>
+  <button class="pulsante tondo" id="btnInfo" aria-label="Informazioni sull'itinerario" title="Informazioni">i</button>
 </div>
 
 <div id="barraModifica"><b>MODALITÀ MODIFICA</b> — trascina i punti nella posizione esatta dei cartelli, poi premi «Copia coordinate» e incolla il risultato in dati.js (o invialo a chi aggiorna la mappa).</div>
@@ -966,6 +987,7 @@ body.in-modifica #btnPercorso { top: calc(126px + env(safe-area-inset-top)); }
     <div class="intestazione">
       <h2 id="schedaTitolo"></h2>
       <div class="dove" id="schedaDove"></div>
+      <div class="nota" id="schedaNota"></div>
     </div>
     <button id="chiudiScheda" aria-label="Chiudi">✕</button>
   </header>
@@ -974,6 +996,7 @@ body.in-modifica #btnPercorso { top: calc(126px + env(safe-area-inset-top)); }
     <div class="etichetta">Testimonianze</div>
     <div id="schedaTesti"></div>
     <div class="fonte" id="schedaFonte"></div>
+    <div id="schedaPoesia"></div>
   </div>
   <div class="piede">
     <div class="navig">
@@ -1008,8 +1031,9 @@ body.in-modifica #btnPercorso { top: calc(126px + env(safe-area-inset-top)); }
     <p class="istruzione" style="margin-top:14px"><span class="mini">1</span><span>Tocca i punti numerati sulla mappa per vedere le fotografie e leggere le testimonianze di ogni luogo.</span></p>
     <p class="istruzione" style="margin-top:8px"><span class="mini" style="background:#d42a1e">〜</span><span>La <b style="color:#d42a1e">linea rossa</b> è l'itinerario consigliato per visitarli tutti in ordine<span id="introKm"></span>. Si può nascondere con il pulsante «Itinerario».</span></p>
     <p class="istruzione" style="margin-top:8px"><span class="mini" style="background:#2a6fdb">⌖</span><span>Premi il tasto posizione per vedere dove sei: il punto blu ti segue lungo il cammino.</span></p>
-    <button class="pulsante accento" id="btnInizia">Esplora la mappa</button>
+    <button class="pulsante accento" id="btnInizia">Chiudi e torna alla mappa</button>
     <div class="crediti">Circolo Culturale «F. Viviano»<br>con le testimonianze raccolte dalla Scuola Primaria «D. Cernazai»</div>
+    <div class="ringraziamenti" id="introRingraziamenti"></div>
   </div>
 </div>
 
@@ -1122,6 +1146,7 @@ body.in-modifica #btnPercorso { top: calc(126px + env(safe-area-inset-top)); }
     document.getElementById("schedaNumero").textContent = l.num;
     document.getElementById("schedaTitolo").textContent = l.titolo;
     document.getElementById("schedaDove").textContent = l.zona + " · " + l.indirizzo;
+    document.getElementById("schedaNota").textContent = l.nota || "";
 
     var gal = document.getElementById("schedaGalleria");
     gal.innerHTML = "";
@@ -1151,6 +1176,35 @@ body.in-modifica #btnPercorso { top: calc(126px + env(safe-area-inset-top)); }
       testi.appendChild(q);
     });
     document.getElementById("schedaFonte").textContent = window.FONTE_TESTIMONIANZE || "";
+
+    /* poesia: compare solo dove è prevista (ultimo pannello) */
+    var contPoesia = document.getElementById("schedaPoesia");
+    contPoesia.innerHTML = "";
+    if (l.poesia) {
+      var box = document.createElement("div");
+      box.className = "poesia";
+      var h3 = document.createElement("h3");
+      h3.textContent = l.poesia.titolo;
+      box.appendChild(h3);
+      var versi = document.createElement("div");
+      versi.className = "versi";
+      l.poesia.versi.forEach(function (v, i) {
+        if (i) versi.appendChild(document.createElement("br"));
+        versi.appendChild(document.createTextNode(v));
+      });
+      box.appendChild(versi);
+      if (l.poesia.traduzione) {
+        var tr = document.createElement("div");
+        tr.className = "traduzione";
+        tr.textContent = l.poesia.traduzione;
+        box.appendChild(tr);
+      }
+      var au = document.createElement("div");
+      au.className = "autore";
+      au.textContent = l.poesia.autore;
+      box.appendChild(au);
+      contPoesia.appendChild(box);
+    }
 
     document.getElementById("contaLuogo").textContent = l.num + " di " + LUOGHI.length;
     /* se la posizione è attiva, il pulsante ricentra sul nuovo luogo */
@@ -1218,16 +1272,34 @@ body.in-modifica #btnPercorso { top: calc(126px + env(safe-area-inset-top)); }
     if (e.target === veloElenco) veloElenco.classList.remove("aperto");
   });
 
-  /* ---------- presentazione ---------- */
+  /* ---------- presentazione ----------
+     Non compare all'apertura: la mappa si vede subito. Le
+     spiegazioni si aprono con il pulsante «i» in alto a destra. */
   var velIntro = document.getElementById("velIntro");
-  if (modifica) velIntro.classList.remove("aperto");
-  else velIntro.classList.add("aperto");
   document.getElementById("btnInizia").addEventListener("click", function () {
     velIntro.classList.remove("aperto");
   });
   document.getElementById("btnInfo").addEventListener("click", function () {
     velIntro.classList.add("aperto");
   });
+  velIntro.addEventListener("click", function (e) {
+    if (e.target === velIntro) velIntro.classList.remove("aperto");
+  });
+
+  /* ringraziamenti: elenco preso da dati.js (window.RINGRAZIAMENTI) */
+  var contRingr = document.getElementById("introRingraziamenti");
+  if (contRingr && window.RINGRAZIAMENTI && window.RINGRAZIAMENTI.length) {
+    var tit = document.createElement("h3");
+    tit.textContent = "Si ringraziano";
+    contRingr.appendChild(tit);
+    var elencoR = document.createElement("ul");
+    for (var iR = 0; iR < window.RINGRAZIAMENTI.length; iR++) {
+      var vociR = document.createElement("li");
+      vociR.textContent = window.RINGRAZIAMENTI[iR];
+      elencoR.appendChild(vociR);
+    }
+    contRingr.appendChild(elencoR);
+  }
 
   /* ---------- posizione: tracciamento continuo e guida al pannello ---------- */
   var btnPos = document.getElementById("btnPosizione");

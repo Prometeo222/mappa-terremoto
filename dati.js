@@ -3,6 +3,9 @@
    50° Anniversario del terremoto, 1976–2026
    Circolo Culturale "F. Viviano"
 
+   Testi allineati alla V bozza dei pannelli e al documento
+   "Testimonianze Terremoto Travesio – per stampa".
+
    Per modificare un testo o una didascalia basta cambiarlo qui.
    Per spostare un punto sulla mappa: aprire la mappa aggiungendo
    ?modifica all'indirizzo, trascinare i punti, premere
@@ -28,9 +31,9 @@ window.LUOGHI = [
   },
   {
     num: 2,
-    titolo: "Chiesa di Madonna di Cosa",
-    zona: "Zancan",
-    indirizzo: "Borgata Zancan",
+    titolo: "Chiesa della Beata Vergine “del Cosa” o Madonna del Latte",
+    zona: "Travesio",
+    indirizzo: "Via Zancan",
     lat: 46.199410,
     lon: 12.884141,
     foto: [
@@ -39,21 +42,24 @@ window.LUOGHI = [
     testo: [
       "Erano le 21, eravamo appena tornati dal Rosario e siamo andati a dormire al primo piano. È andata subito via la luce e le finestre hanno cominciato a sbattere forte. Non sapevo cosa fosse il terremoto. Ci siamo trovati nel cortile. Quella sera, mio papà ha tirato fuori la macchina e abbiamo dormito dentro l’auto, in un prato. Si sentivano le sirene delle ambulanze.",
       "Avevo tanta paura, c’era sempre qualche scossa. Quando era buio avevo bisogno di qualcuno vicino. Frequentavo la quinta elementare.",
-      "Avevo sei anni. Vivevo con la nonna, i miei genitori erano in Francia. Stavamo guardando la televisione. Ad un certo punto è mancata la luce, mi sono caduti i calcinacci sulla testa. Siamo subito usciti in cortile. Di quella sera ho ancora in mente l’immagine di una signora anziana che aveva una candela accesa in mano: nonostante lei tremasse, la candela non si spegneva."
+      "Avevo sei anni. Vivevo con la nonna, i miei genitori erano in Francia. Stavamo guardando la televisione. Ad un certo punto è mancata la luce, mi sono caduti i calcinacci sulla testa. Siamo subito usciti in cortile.",
+      "Di quella sera ho ancora in mente l’immagine di una signora anziana che aveva una candela accesa in mano, nonostante lei tremasse, la candela non si spegneva."
     ]
   },
   {
     num: 3,
-    titolo: "Casa ing. Domenico Margarita",
+    titolo: "Casa dell'ing. Domenico Margarita",
     zona: "Travesio",
     indirizzo: "Via Zancan",
+    nota: "Ora appartenente a privati",
     lat: 46.196891,
     lon: 12.871143,
     foto: [
       { src: "foto/03_storica.jpg", did: "La casa dopo il terremoto" }
     ],
     testo: [
-      "Avevo diciotto anni. Ero in cucina con mia sorella, in un primo momento pensavamo fosse la centrifuga della lavatrice che faceva sempre tanta confusione. Non capivo cosa stesse succedendo, poi ho sentito urlare dal mio cortile: “Fuori, fuori, c’è il terremoto!”. Io mi sono spaventata, non capivo la gravità di ciò che stava succedendo. C’erano persone spaventate, bambini che piangevano, anziani ancora più impauriti. Quella notte erano tutti in attesa di notizie dagli altri paesi, soprattutto quelli che avevano parenti in altre zone del Friuli. Non c’erano collegamenti e neanche la luce. Chi le aveva, usava le radioline CB per comunicare; Lt1, la radio di Pordenone, dava informazioni sul terremoto e sulle zone colpite dal sisma. A quel tempo molti genitori o parenti erano lontani da casa e non c’erano molti modi per informarli sull’accaduto."
+      "Avevo diciotto anni. Ero in cucina con mia sorella, in un primo momento pensavamo fosse la centrifuga della lavatrice che faceva sempre tanta confusione. Non capivo cosa stesse succedendo, poi ho sentito urlare dal mio cortile: “Fuori, fuori, c’è il terremoto!”. Io mi sono spaventata, non capivo la gravità di ciò che stava succedendo. C’erano persone spaventate, bambini che piangevano, anziani ancora più impauriti. Quella notte erano tutti in attesa di notizie dagli altri paesi, soprattutto quelli che avevano parenti in altre zone del Friuli.",
+      "Non c’erano collegamenti e neanche la luce. Chi le aveva, usava le radioline CB per comunicare; Lt1, la radio di Pordenone, dava informazioni sul terremoto e sulle zone colpite dal sisma. A quel tempo molti genitori o parenti erano lontani da casa e non c’erano molti modi per informarli sull’accaduto."
     ]
   },
   {
@@ -77,25 +83,28 @@ window.LUOGHI = [
     indirizzo: "Via Praforte",
     lat: 46.198288,
     lon: 12.869444,
+    /* Le foto sono nello stesso ordine del pannello stampato: prima il
+       cancello, poi la veduta del 1911 (il documento delle testimonianze
+       dice "nella seconda foto … si nota la canonica in alto a destra"). */
     foto: [
-      { src: "foto/05_storica1911.jpg", did: "Veduta del 16 aprile 1911: in alto a destra si nota la canonica" },
-      { src: "foto/05_cancello.jpg", did: "" }
+      { src: "foto/05_cancello.jpg", did: "" },
+      { src: "foto/05_storica1911.jpg", did: "Veduta del 16 aprile 1911: in alto a destra si nota la canonica" }
     ],
     testo: [
-      "Avevo tre anni e conservo scolpito il ricordo di quel momento. Dormivo con mio fratello nella camera con due letti separati. Ricordo il rumore che ci svegliò… sembrava un tornado! La porta si spalancò ed entrò mio padre che ci prese in braccio, mentre i letti si scontravano. Scendemmo verso il garage per uscire, ma dal tetto piovevano le tegole. Non posso dimenticare il bagliore rosso fuoco sopra la montagna.",
+      "Avevo tre anni e conservo scolpito il ricordo di quel momento. Dormivo con mio fratello nella camera con due letti separati. Ricordo il rumore che ci svegliò … sembrava un tornado! La porta si spalancò ed entrò mio padre che ci prese in braccio, mentre i letti si scontravano. Scendemmo verso il garage per uscire, ma dal tetto piovevano le tegole. Non posso dimenticare il bagliore rosso fuoco sopra la montagna.",
       "Stavo guidando il camion per ragioni di lavoro e ricordo che la strada aveva cominciato ad ondeggiare. Mi ero spaventato molto, solo dopo un po’ di tempo ho realizzato che si trattava del terremoto."
     ]
   },
   {
     num: 6,
-    titolo: "Case Nassutti, Cattarinuzzi e Petracco",
+    titolo: "Case delle famiglie Nassutti, Cattarinuzzi e Petracco",
     zona: "Travesio",
     indirizzo: "Via Riosecco",
     lat: 46.198429,
     lon: 12.865197,
     foto: [
-      { src: "foto/06_storica1.jpg", did: "Le case dopo il terremoto" },
-      { src: "foto/06_storica2.jpg", did: "I danni del sisma in via Riosecco" }
+      { src: "foto/06_storica2.jpg", did: "Casa della famiglia Nassutti Maria, demolita e ricostruita" },
+      { src: "foto/06_storica1.jpg", did: "Casa delle famiglie Cattarinuzzi Dante e Petracco Regina, distrutta dal terremoto" }
     ],
     testo: [
       "Era un tranquillo giovedì, la giornata era particolarmente calda, tanto che i moscerini erano vispi e ti pungevano in continuazione. Stava calando la sera e ci trovavamo tutti in casa a cena. Verso le 21.00 sentiamo una vibrazione che scuote la casa, ci guardiamo in faccia e mia sorella grida “Il terremoto, usciamo di casa!”. Appena fuori sul ballatoio una forte scossa ci impedisce di scendere le scale perché i gradini si muovevano e il parapetto ondeggiava. Non so come ci siamo ritrovati nel prato, da lì vedevamo la casa ondeggiare. La scossa sembrava non terminare mai, è durata un minuto ma sembrava un’eternità. Verso sud ho visto un grande bagliore e ho sentito un rumore cupo. “L’ORCOLAT” si era svegliato. La mia famiglia e i vicini usciti all’aperto si chiamavano l’un l’altro per sapere come stavano dopo aver preso tanta paura."
@@ -103,14 +112,15 @@ window.LUOGHI = [
   },
   {
     num: 7,
-    titolo: "Casa Cernazai",
+    titolo: "Casa di Domenico Cernazai",
     zona: "Travesio",
-    indirizzo: "Via Gondei",
+    indirizzo: "Via Rizzo",
+    nota: "Ora appartenente a privati",
     lat: 46.195190,
     lon: 12.866160,
     foto: [
       { src: "foto/07_storica1.jpg", did: "La casa dopo il terremoto" },
-      { src: "foto/07_storica2.jpg", did: "Le macerie in via Gondei" },
+      { src: "foto/07_storica2.jpg", did: "Le macerie nella borgata" },
       { src: "foto/07_storica3.jpg", did: "Il portale puntellato dopo le scosse" }
     ],
     testo: [
@@ -119,14 +129,15 @@ window.LUOGHI = [
   },
   {
     num: 8,
-    titolo: "Case Origoni e Borsoi",
+    titolo: "Case delle famiglie Truant e Borsoi",
     zona: "Usago",
     indirizzo: "Via Dante",
-    lat: 46.186590,
-    lon: 12.873280,
+    lat: 46.186514,
+    lon: 12.872659,
+    /* Prima foto = quella in alto sul pannello (due case), seconda = quella in basso. */
     foto: [
-      { src: "foto/08_storica1.jpg", did: "I crolli nella borgata" },
-      { src: "foto/08_storica2.jpg", did: "Le case dopo il sisma" }
+      { src: "foto/08_storica1.jpg", did: "Casa della famiglia Truant Ermando, distrutta dal terremoto, e casa di Borsoi Giuseppe, distrutta dal terremoto e ricostruita" },
+      { src: "foto/08_storica2.jpg", did: "Casa della famiglia Borsoi Antonio, distrutta dal terremoto e ricostruita" }
     ],
     testo: [
       "Avevo diciassette anni. Nel momento della scossa mi trovavo in bagno al primo piano ed ero appena uscita in terrazzo a stendere i miei vestiti perché prendessero un po’ d'aria. All'improvviso, il mondo mi crollò addosso o, meglio, mi stava cadendo in faccia lo specchio che avevo di fronte. Faccio per uscire, ma la porta del bagno era bloccata da fuori perché un mobiletto si era rovesciato proprio davanti. Ricordo che urlavo chiamando: “Mamma”. Nel frattempo, dalla cucina tutta la mia famiglia si era precipitata fuori accorgendosi della mia assenza; immediatamente, mio papà e mio fratello maggiore si precipitarono con non poca fatica alla mia ricerca. Uscendo in cortile, ricordo ancora la felicità nel vederli e nel rivedere tutta la mia famiglia. La notte del terremoto tutta la borgata, che allora era un'unica famiglia, si radunò nel nostro garage che all’epoca era una struttura appena costruita; chi dormiva sulla sedia, chi sulla catasta della legna, noi giovani in macchina ancora tutti increduli per quello che ci era successo e con una nuova parola in testa “TERREMOTO” che ancora oggi, a nominarla, mette i brividi."
@@ -158,7 +169,7 @@ window.LUOGHI = [
     ],
     testo: [
       "Ero giovanissima e stavo facendo una telefonata da una cabina telefonica. Avevo in braccio il mio gatto, che aveva percepito il pericolo in anticipo e aveva iniziato a graffiarmi dappertutto. Io non capivo, ma poi, purtroppo, mi resi conto di quello che era capitato.",
-      "Al momento della scossa tutti hanno cercato di mettersi al sicuro. La nonna ha capito subito che era una scossa: ha cominciato a urlare “Fuori, fuori, fuori!”, l’aveva già sentito, forse. Le donne di casa hanno preso un bambino ciascuna. Siamo usciti di corsa nel cortile su cui si affacciavano le abitazioni e siamo corsi fino all’orto, lontano da casa. A valle si vedeva la terra che si apriva e uscivano lingue di fuoco. Noi abbiamo dormito in macchina."
+      "Al momento della scossa tutti hanno cercato di mettersi al sicuro. La nonna ha capito subito che era una scossa: ha cominciato a urlare “Fuori, fuori, fuori!“, l’aveva già sentito, forse. Le donne di casa hanno preso un bambino ciascuna. Siamo usciti di corsa nel cortile su cui si affacciavano le abitazioni e siamo corsi fino all’orto, lontano da casa. A valle si vedeva la terra che si apriva e uscivano lingue di fuoco. Noi abbiamo dormito in macchina."
     ]
   },
   {
@@ -166,6 +177,7 @@ window.LUOGHI = [
     titolo: "Chiesa della Madonna Ausiliatrice",
     zona: "Molevana",
     indirizzo: "Via Giuseppe Garibaldi",
+    nota: "Edificata dalla popolazione del paese alla fine dell’ultima guerra e distrutta dal terremoto",
     lat: 46.184790,
     lon: 12.881810,
     foto: [
@@ -175,12 +187,34 @@ window.LUOGHI = [
     testo: [
       "Quella sera ero da poco arrivato a casa e stavo cenando con la mia famiglia. Al momento della scossa tutti hanno cercato di fare qualcosa per mettersi al sicuro. Io ho provato ad aprire la porta ma non sono riuscito. Solo alla fine della scossa la porta si è aperta così mia moglie e la nonna con un bambino a testa, perché avevo due figli, si sono precipitate fuori in giardino. Io mi sono messo a correre e sono andato a vedere come stava il nonno di mia moglie che abitava poco distante da me. Mentre correvo ho perso le ciabatte. Quando sono arrivato, sono salito in camera e l’ho chiamato più volte. Lui stava dormendo su un letto pieno di calcinacci. L’ho svegliato e mi ha chiesto cosa fosse successo perché non si era accorto di nulla. Gli ho detto di uscire, mi ha risposto di no e si è rimesso a dormire.",
       "Io facevo l’autista di pullman, ogni tanto rientravo a casa con questo mezzo; quella sera ho radunato tutte le persone anziane del borgo e le ho fatte salire in corriera. Verso mezzanotte è arrivato il medico e ha visitato tutti gli anziani."
-    ]
+    ],
+    /* Da inserire nell'ultimo pannello (Molevana), come indicato
+       nel documento definitivo delle testimonianze. */
+    poesia: {
+      titolo: "J’ sin",
+      versi: ["Lagrimi’ secj’", "j’ sin,", "su la nestra cjera", "disfigurada.", "E cours j’ sin,", "ch’a mènin", "su li’ viti’ cioncjadi’", "e la masera."],
+      traduzione: "Siamo. Lacrime secche siamo, sulla nostra terra sfigurata. E siamo cuori che resistono sulle vite schiantate e le macerie.",
+      autore: "Novella Cantarutti"
+    }
   }
 ];
 
 /* Fonte comune a tutte le testimonianze */
-window.FONTE_TESTIMONIANZE = "Tratto dalle testimonianze dei familiari degli alunni della Scuola Primaria “D. Cernazai” riguardo al sisma del 6 maggio 1976 a Travesio";
+window.FONTE_TESTIMONIANZE = "Tratto dalle testimonianze dei familiari degli alunni della Scuola Primaria “D. Cernazai” riguardo al sisma del 6 maggio 1976 nel Comune di Travesio";
+
+/* Ringraziamenti, come nel documento definitivo delle testimonianze.
+   Compaiono in fondo alla schermata di presentazione (il tasto «i»).
+   Per togliere l'elenco basta svuotare le parentesi quadre. */
+window.RINGRAZIAMENTI = [
+  "Comune di Travesio",
+  "Istituto Comprensivo Valle del Meduna, Cosa, Arzino (Dirigente Scolastico, insegnanti, collaboratori scolastici, alunni)",
+  "Familiari e conoscenti degli alunni della Scuola Primaria “D. Cernazai” di Travesio",
+  "Baselli Delia",
+  "Bortolussi Giovanni",
+  "Truant Caterina",
+  "Gruppo Alpini Travesio “Valcosa”",
+  "Tutti coloro che in diverse forme hanno permesso la realizzazione del progetto"
+];
 
 
 /* ============================================================

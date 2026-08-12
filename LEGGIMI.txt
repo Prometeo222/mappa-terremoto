@@ -24,7 +24,10 @@ recente; non usa servizi esterni se non lo sfondo della mappa
 COME PROVARE LA MAPPA
 ---------------------
 Aprire index.html con doppio click. Si apre nel browser:
-  - schermata di presentazione, poi la mappa con 11 punti numerati
+  - si vede subito la mappa con gli 11 punti numerati
+  - il pulsante "i" in alto a destra apre la presentazione del
+    progetto e la spiegazione dei simboli (non compare piu' da
+    sola all'apertura)
   - il FILO ROSSO e' l'anello consigliato per visitarli tutti in
     ordine e tornare al punto di partenza (vedi sezione dedicata)
   - toccando/cliccando un punto si apre la scheda con foto e
@@ -97,6 +100,12 @@ indirizzo, coordinate, elenco foto con didascalia ("did") e
 testimonianze ("testo"). Modificare il testo desiderato e salvare.
 Per aggiungere una foto: copiarla nella cartella foto\ e aggiungere
 una riga  { src: "foto/nomefile.jpg", did: "didascalia" }  al luogo.
+Le foto di ogni luogo sono nello stesso ordine del pannello stampato
+(la prima e' quella in alto sul pannello).
+In fondo a dati.js, sopra il tracciato, ci sono anche:
+  window.FONTE_TESTIMONIANZE  la riga sulla fonte, uguale per tutte
+  window.RINGRAZIAMENTI       l'elenco "Si ringraziano", che compare
+                              in fondo alla presentazione (tasto "i")
 
 
 COME PUBBLICARLA SU INTERNET (GitHub Pages, gratuito)
@@ -159,17 +168,25 @@ NOTE E COSE DA COMPLETARE
 - Posizioni dei punti, situazione attuale:
   * punti 1, 2, 4, 9, 10: presi dalle chiese e dalle ancone
     censite su OpenStreetMap;
-  * punti 3, 5, 6, 7, 11: corretti su indicazione di chi conosce
+  * punti 3, 5, 6, 7, 8, 11: corretti su indicazione di chi conosce
     i luoghi (3 = dove c'e' il locale Furpizza; 5 = incrocio di
     Via Praforte con il sentiero; 6 = casa civico 101; 7 = angolo
-    a 45 gradi tra Via Gondei e Via Villa, civico 1; 11 = davanti
+    a 45 gradi tra Via Gondei e Via Villa, civico 1; 8 = incrocio
+    a tre vie di Via Dante, accanto alla casa 17; 11 = davanti
     alla chiesa verso Via Garibaldi);
-  * punto 8 (Usago, Via Dante): ancora stimato sulla via, da
-    rifinire con la modalita' ?modifica.
+  * tutte e 11 le posizioni sono quindi confermate: restano da
+    verificare sul posto col telefono.
 - Le didascalie delle foto sono provvisorie: da far rivedere al
-  Circolo Culturale.
-- La poesia di Novella Cantarutti e' predisposta ma NON inserita:
-  prima serve l'autorizzazione dei familiari.
+  Circolo Culturale. In particolare la prima foto del punto 5 (il
+  cancello) e' senza didascalia.
+- La poesia di Novella Cantarutti ("J' sin") e' nella scheda del
+  punto 11 (Molevana), come indica il documento definitivo delle
+  testimonianze. Se l'autorizzazione dei familiari non arrivasse,
+  basta cancellare il blocco "poesia" del punto 11 in dati.js.
+- Il pannello 8 (Usago, Via Dante) sulla mappa riporta le TRE case
+  indicate dal Circolo (Truant Ermando; Borsoi Giuseppe; Borsoi
+  Antonio): la V bozza del pannello stampato ha ancora il testo
+  vecchio (Borsoi Antonio e Origoni Giovanna) e va corretta.
 - Il cartello n. 12 della bozza (Usago, Via Val Cosa, Ancona di
   S. Antonio) e' stato escluso come richiesto.
 - Attribuzione dello sfondo mappa (obbligatoria): (c) OpenStreetMap,
